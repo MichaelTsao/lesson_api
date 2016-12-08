@@ -7,6 +7,7 @@
 
 namespace app\commands;
 
+use Hashids\Hashids;
 use yii\console\Controller;
 
 /**
@@ -23,8 +24,11 @@ class HelloController extends Controller
      * This command echoes what you have entered as the message.
      * @param string $message the message to be echoed.
      */
-    public function actionIndex($message = 'hello world')
+    public function actionIndex()
     {
-        echo $message . "\n";
+        for ($i=0;$i<5;$i++){
+            $id = base_convert(microtime(), 10, 36);
+            echo $id."\n";
+        }
     }
 }
