@@ -16,6 +16,25 @@ class LessonController extends ActiveController
 {
     public $modelClass = 'app\models\Lesson';
 
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'except' => ['index'],
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
     public function actions()
     {
         $actions = parent::actions();
