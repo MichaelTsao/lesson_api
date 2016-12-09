@@ -7,7 +7,9 @@
 
 namespace app\commands;
 
+use app\models\Lesson;
 use Hashids\Hashids;
+use mycompany\common\Logic;
 use yii\console\Controller;
 
 /**
@@ -26,9 +28,7 @@ class HelloController extends Controller
      */
     public function actionIndex()
     {
-        for ($i=0;$i<5;$i++){
-            $id = base_convert(microtime(), 10, 36);
-            echo $id."\n";
-        }
+        $a = new Lesson(['name'=>'bbbb']);
+        $a->save();
     }
 }

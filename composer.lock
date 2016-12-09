@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0432298cc5f80b8bf244f2e8d4495a2c",
-    "content-hash": "1afc9613e348cbdb643f19ac890e1eec",
+    "hash": "da02b3310bd2820e74ecacb6d2837281",
+    "content-hash": "ab3feb4c68da53d45d9242264ba78ad6",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -22,7 +22,7 @@
                 "shasum": ""
             },
             "require": {
-                "bower-asset/jquery": ">=1.9.1,<=3"
+                "bower-asset/jquery": ">=1.9.1,<4.0"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -363,6 +363,49 @@
             "time": "2016-11-15 18:59:27"
         },
         {
+            "name": "mycompany/common",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@git.hangjiashuo.com.cn:dakashuo/lib-common.git",
+                "reference": "aeee2f227e1e4f792e35acd08e2e797999df6a91"
+            },
+            "require": {
+                "hashids/hashids": "~2.0.0",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-redis": "^2.0"
+            },
+            "type": "common library",
+            "autoload": {
+                "psr-4": {
+                    "mycompany\\common\\": ""
+                }
+            },
+            "license": [
+                "common-1"
+            ],
+            "authors": [
+                {
+                    "name": "Jinlin Wang",
+                    "email": "285253001@qq.com",
+                    "homepage": "http://xxx.xxx.com",
+                    "role": "Creator"
+                }
+            ],
+            "description": "common",
+            "homepage": "http://git.hangjiashuo.com.cn:8686/dakashuo/lib-common.git",
+            "keywords": [
+                "common",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://xxx.xxx.com",
+                "source": "https://xxx.xxx.com"
+            },
+            "time": "2016-12-09 04:06:09"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.4",
             "source": {
@@ -605,6 +648,54 @@
                 "yii2"
             ],
             "time": "2016-02-06 00:49:24"
+        },
+        {
+            "name": "yiisoft/yii2-redis",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-redis.git",
+                "reference": "7fd93ff3847e765964c8c83b7e3eed0281078916"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-redis/7fd93ff3847e765964c8c83b7e3eed0281078916.zip",
+                "reference": "7fd93ff3847e765964c8c83b7e3eed0281078916",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": ">=2.0.4"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\redis\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc"
+                }
+            ],
+            "description": "Redis Cache, Session and ActiveRecord for the Yii framework",
+            "keywords": [
+                "active-record",
+                "cache",
+                "redis",
+                "session",
+                "yii2"
+            ],
+            "time": "2016-03-17 04:11:03"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -3060,7 +3151,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mycompany/common": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

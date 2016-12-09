@@ -19,9 +19,9 @@ $config = [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
-        'errorHandler' => [
-            'errorAction' => 'site/error',
-        ],
+//        'errorHandler' => [
+//            'errorAction' => 'lesson/error',
+//        ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             // send all mails to a file by default. You have to set
@@ -44,7 +44,15 @@ $config = [
             'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'lesson'],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'lesson',
+                    'pluralize' => false,
+                    'only' => ['index', 'view'],
+                    'tokens' => [
+                        '{id}' => '<id:\\w+>'
+                    ]
+                ],
             ],
         ],
     ],

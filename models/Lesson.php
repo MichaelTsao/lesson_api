@@ -2,7 +2,10 @@
 
 namespace app\models;
 
+use mycompany\common\Logic;
 use Yii;
+use yii\behaviors\AttributeBehavior;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "lesson".
@@ -14,6 +17,9 @@ use Yii;
  */
 class Lesson extends \yii\db\ActiveRecord
 {
+    const STATUS_NORMAL = 1;
+    const STATUS_CLOSED = 2;
+
     /**
      * @inheritdoc
      */
@@ -28,10 +34,10 @@ class Lesson extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['lesson_id', 'name'], 'required'],
+            [['name'], 'required'],
             [['status'], 'integer'],
             [['ctime'], 'safe'],
-            [['lesson_id'], 'string', 'max' => 6],
+            [['lesson_id'], 'string', 'max' => 12],
             [['name'], 'string', 'max' => 1000],
         ];
     }
@@ -46,6 +52,27 @@ class Lesson extends \yii\db\ActiveRecord
             'name' => '名字',
             'status' => '状态',
             'ctime' => '创建时间',
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => AttributeBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => 'lesson_id',
+                ],
+                'value' => Logic::makeID(),
+            ],
+        ];
+    }
+
+    public function fields()
+    {
+        return [
+            'lesson_id',
+            'name',
         ];
     }
 }

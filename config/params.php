@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'adminEmail' => 'admin@example.com',
+    'id_salt' => 'Do you know New Lesson?',
 ];
