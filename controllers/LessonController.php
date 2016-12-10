@@ -10,6 +10,8 @@ namespace app\controllers;
 
 use app\models\Lesson;
 use yii\data\ActiveDataProvider;
+use yii\filters\auth\HttpBasicAuth;
+use yii\helpers\ArrayHelper;
 use yii\rest\ActiveController;
 
 class LessonController extends ActiveController
@@ -21,7 +23,13 @@ class LessonController extends ActiveController
      */
     public function behaviors()
     {
-        return [
+        $behaviors = parent::behaviors();
+
+//        $behaviors['authenticator'] = [
+//            'class' => HttpBasicAuth::className(),
+//        ];
+
+        $access =  [
             'access' => [
                 'class' => \yii\filters\AccessControl::className(),
                 'except' => ['index'],
@@ -33,6 +41,8 @@ class LessonController extends ActiveController
                 ],
             ],
         ];
+
+        return ArrayHelper::merge($behaviors, $access);
     }
 
     public function actions()
