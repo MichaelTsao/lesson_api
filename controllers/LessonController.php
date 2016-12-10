@@ -10,7 +10,7 @@ namespace app\controllers;
 
 use app\models\Lesson;
 use yii\data\ActiveDataProvider;
-use yii\filters\auth\HttpBasicAuth;
+use yii\filters\auth\QueryParamAuth;
 use yii\helpers\ArrayHelper;
 use yii\rest\ActiveController;
 
@@ -25,9 +25,9 @@ class LessonController extends ActiveController
     {
         $behaviors = parent::behaviors();
 
-//        $behaviors['authenticator'] = [
-//            'class' => HttpBasicAuth::className(),
-//        ];
+        $behaviors['authenticator'] = [
+            'class' => QueryParamAuth::className(),
+        ];
 
         $access =  [
             'access' => [
