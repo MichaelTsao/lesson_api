@@ -50,10 +50,14 @@ $config = [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'lesson',
                     'pluralize' => false,
-                    'only' => ['index', 'view'],
+                    'only' => ['index', 'view', 'list'],
                     'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ]
+                        '{id}' => '<id:\\w+>',
+                        '{type}' => '<type:\\w+>',
+                    ],
+                    'extraPatterns' => [
+                        'GET list/<type>' => 'list',
+                    ],
                 ],
             ],
         ],

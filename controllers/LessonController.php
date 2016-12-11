@@ -32,7 +32,7 @@ class LessonController extends ActiveController
         $access =  [
             'access' => [
                 'class' => \yii\filters\AccessControl::className(),
-                'except' => ['index'],
+                'only' => ['view'],
                 'rules' => [
                     [
                         'allow' => true,
@@ -59,5 +59,10 @@ class LessonController extends ActiveController
         return new ActiveDataProvider([
             'query' => Lesson::find()->where(['status' => Lesson::STATUS_NORMAL])->orderBy(['ctime' => SORT_DESC]),
         ]);
+    }
+
+    public function actionList($type)
+    {
+        return $type;
     }
 }
