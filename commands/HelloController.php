@@ -7,8 +7,7 @@
 
 namespace app\commands;
 
-use app\models\Lesson;
-use Hashids\Hashids;
+use dakashuo\lesson\User;
 use mycompany\common\Logic;
 use yii\console\Controller;
 
@@ -28,7 +27,7 @@ class HelloController extends Controller
      */
     public function actionIndex()
     {
-        $a = new Lesson(['name'=>'bbbb']);
-        $a->save();
+        echo Logic::makeID();
+        $u=new User();
     }
 }

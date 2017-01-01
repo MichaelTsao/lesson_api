@@ -16,7 +16,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'dakashuo\lesson\User',
             'enableAutoLogin' => false,
             'enableSession' => false,
             'loginUrl' => null,

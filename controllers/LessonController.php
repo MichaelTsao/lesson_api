@@ -8,7 +8,7 @@
 
 namespace app\controllers;
 
-use app\models\Lesson;
+use dakashuo\lesson\Lesson;
 use yii\data\ActiveDataProvider;
 use yii\filters\auth\QueryParamAuth;
 use yii\helpers\ArrayHelper;
@@ -16,7 +16,7 @@ use yii\rest\ActiveController;
 
 class LessonController extends ActiveController
 {
-    public $modelClass = 'app\models\Lesson';
+    public $modelClass = 'dakashuo\lesson\Lesson';
 
     /**
      * @inheritdoc
