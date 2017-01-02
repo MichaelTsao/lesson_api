@@ -22,7 +22,7 @@
                 "shasum": ""
             },
             "require": {
-                "bower-asset/jquery": ">=1.9.1,<4.0"
+                "bower-asset/jquery": ">=1.9.1,<=3"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -261,7 +261,7 @@
             "source": {
                 "type": "git",
                 "url": "git@git.hangjiashuo.com.cn:dakashuo/lesson_business.git",
-                "reference": "05527e38a3a9f7fb5c3bc6d8b6e139a4cf7e68ec"
+                "reference": "ca6540e19f9270a3ec87d8b06bc30e5c99c97600"
             },
             "require": {
                 "mycompany/common": "dev-master",
@@ -298,7 +298,7 @@
                 "email": "caoxiang@dakashuo.com",
                 "source": "http://git.hangjiashuo.com.cn/lesson_business"
             },
-            "time": "2016-12-29 12:01:04"
+            "time": "2017-01-02 13:12:54"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -346,16 +346,16 @@
         },
         {
             "name": "hashids/hashids",
-            "version": "2.0.1",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ivanakimov/hashids.php.git",
-                "reference": "fde206587c004fa21f8f355eec179fe138a1fd21"
+                "reference": "28889ed83cdc91f4a55637daff0fb5c799eb324e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/ivanakimov/hashids.php/fde206587c004fa21f8f355eec179fe138a1fd21.zip",
-                "reference": "fde206587c004fa21f8f355eec179fe138a1fd21",
+                "url": "https://packagist.phpcomposer.com/files/ivanakimov/hashids.php/28889ed83cdc91f4a55637daff0fb5c799eb324e.zip",
+                "reference": "28889ed83cdc91f4a55637daff0fb5c799eb324e",
                 "shasum": ""
             },
             "require": {
@@ -405,7 +405,7 @@
                 "obfuscate",
                 "youtube"
             ],
-            "time": "2016-12-29 20:38:38"
+            "time": "2017-01-01 13:33:33"
         },
         {
             "name": "mycompany/common",

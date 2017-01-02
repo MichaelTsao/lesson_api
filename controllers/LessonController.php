@@ -11,7 +11,6 @@ namespace app\controllers;
 use dakashuo\lesson\Lesson;
 use yii\data\ActiveDataProvider;
 use yii\filters\auth\QueryParamAuth;
-use yii\helpers\ArrayHelper;
 use yii\rest\ActiveController;
 
 class LessonController extends ActiveController
@@ -27,22 +26,10 @@ class LessonController extends ActiveController
 
         $behaviors['authenticator'] = [
             'class' => QueryParamAuth::className(),
+            'only' => ['contents', 'content'],
         ];
 
-        $access =  [
-            'access' => [
-                'class' => \yii\filters\AccessControl::className(),
-                'only' => ['view'],
-                'rules' => [
-                    [
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-        ];
-
-        return ArrayHelper::merge($behaviors, $access);
+        return $behaviors;
     }
 
     public function actions()
@@ -61,8 +48,13 @@ class LessonController extends ActiveController
         ]);
     }
 
-    public function actionList($type)
+    public function actionContents($id)
     {
-        return $type;
+        return;
+    }
+
+    public function actionContent($id)
+    {
+        return;
     }
 }
