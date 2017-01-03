@@ -10,27 +10,11 @@ namespace app\controllers;
 
 use dakashuo\lesson\Lesson;
 use yii\data\ActiveDataProvider;
-use yii\filters\auth\QueryParamAuth;
 use yii\rest\ActiveController;
 
 class LessonController extends ActiveController
 {
     public $modelClass = 'dakashuo\lesson\Lesson';
-
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        $behaviors = parent::behaviors();
-
-        $behaviors['authenticator'] = [
-            'class' => QueryParamAuth::className(),
-            'only' => ['contents', 'content'],
-        ];
-
-        return $behaviors;
-    }
 
     public function actions()
     {
@@ -46,15 +30,5 @@ class LessonController extends ActiveController
         return new ActiveDataProvider([
             'query' => Lesson::find()->where(['status' => Lesson::STATUS_NORMAL])->orderBy(['ctime' => SORT_DESC]),
         ]);
-    }
-
-    public function actionContents($id)
-    {
-        return;
-    }
-
-    public function actionContent($id)
-    {
-        return;
     }
 }
