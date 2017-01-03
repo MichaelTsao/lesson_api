@@ -67,6 +67,18 @@ $config = [
                         'GET list/<id>' => 'list',
                     ],
                 ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'comment',
+                    'pluralize' => false,
+                    'only' => ['list', 'create'],
+                    'tokens' => [
+                        '{id}' => '<id:\\w+>',
+                    ],
+                    'extraPatterns' => [
+                        'GET list/<id>' => 'list',
+                    ],
+                ],
             ],
         ],
     ],

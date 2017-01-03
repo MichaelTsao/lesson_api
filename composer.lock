@@ -261,7 +261,7 @@
             "source": {
                 "type": "git",
                 "url": "git@git.hangjiashuo.com.cn:dakashuo/lesson_business.git",
-                "reference": "4ddd86b0818066525a54166ed8de539fa9d5f611"
+                "reference": "03f8819dd1439bf1ab15e9f6d802f9e355112a24"
             },
             "require": {
                 "mycompany/common": "dev-master",
@@ -298,7 +298,7 @@
                 "email": "caoxiang@dakashuo.com",
                 "source": "http://git.hangjiashuo.com.cn/lesson_business"
             },
-            "time": "2017-01-03 07:43:23"
+            "time": "2017-01-03 12:10:58"
         },
         {
             "name": "ezyang/htmlpurifier",
