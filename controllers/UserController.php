@@ -8,14 +8,28 @@
 
 namespace app\controllers;
 
+use dakashuo\lesson\Pay;
 use dakashuo\lesson\User;
 use mycompany\common\WeiXin;
 use yii\rest\Controller;
 use Yii;
 use yii\web\ForbiddenHttpException;
+use yii\filters\auth\QueryParamAuth;
 
 class UserController extends Controller
 {
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+
+        $behaviors['authenticator'] = [
+            'class' => QueryParamAuth::className(),
+            'only' => ['pay-list', 'info'],
+        ];
+
+        return $behaviors;
+    }
+
     public function actionLogin($code)
     {
         $weixin = new WeiXin([
@@ -34,8 +48,13 @@ class UserController extends Controller
         return $token;
     }
 
+    public function actionInfo()
+    {
+        return Yii::$app->user->identity;
+    }
+
     public function actionPayList()
     {
-
+        return Pay::findAll(['user_id' => Yii::$app->user->id]);
     }
 }

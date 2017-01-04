@@ -84,11 +84,12 @@ $config = [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'user',
                     'pluralize' => false,
-                    'only' => ['login', 'pay-list'],
+                    'only' => ['login', 'pay-list', 'info'],
                     'tokens' => [
                         '{id}' => '<id:\\w+>',
                     ],
                     'extraPatterns' => [
+                        'GET /' => 'info',
                         'GET login' => 'login',
                         'GET pay-list' => 'pay-list',
                     ],
