@@ -41,6 +41,7 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        'redis' => require(__DIR__ . '/redis.php'),
         'urlManager' => [
             'enablePrettyUrl' => true,
             'enableStrictParsing' => true,
@@ -77,6 +78,19 @@ $config = [
                     ],
                     'extraPatterns' => [
                         'GET list/<id>' => 'list',
+                    ],
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'user',
+                    'pluralize' => false,
+                    'only' => ['login', 'pay-list'],
+                    'tokens' => [
+                        '{id}' => '<id:\\w+>',
+                    ],
+                    'extraPatterns' => [
+                        'GET login' => 'login',
+                        'GET pay-list' => 'pay-list',
                     ],
                 ],
             ],

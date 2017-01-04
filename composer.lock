@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dfd68e0e88cbb52df02c9ad83cbcc076",
-    "content-hash": "cfbe2a37d6848089ed97d795ed223be1",
+    "hash": "bd7a166c1713e8be4c6379788f980196",
+    "content-hash": "4c455c11ca0a93c549920586231a12e3",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -261,7 +261,7 @@
             "source": {
                 "type": "git",
                 "url": "git@git.hangjiashuo.com.cn:dakashuo/lesson_business.git",
-                "reference": "03f8819dd1439bf1ab15e9f6d802f9e355112a24"
+                "reference": "8cf85b3f1cbf0b372a2823fd08a4b1fd88f91707"
             },
             "require": {
                 "mycompany/common": "dev-master",
@@ -298,7 +298,7 @@
                 "email": "caoxiang@dakashuo.com",
                 "source": "http://git.hangjiashuo.com.cn/lesson_business"
             },
-            "time": "2017-01-03 12:10:58"
+            "time": "2017-01-04 08:16:23"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -413,42 +413,39 @@
             "source": {
                 "type": "git",
                 "url": "git@git.hangjiashuo.com.cn:dakashuo/lib-common.git",
-                "reference": "190429d5b4001c8652a62de6a92ab90ffa32186c"
+                "reference": "f69fddd0be3e7b27392f4d5d78ffb9aabb4a33dd"
             },
             "require": {
                 "hashids/hashids": "~2.0.0",
                 "php": ">=5.4.0",
                 "yiisoft/yii2": "*",
+                "yiisoft/yii2-httpclient": "~2.0.0",
                 "yiisoft/yii2-redis": "^2.0"
             },
-            "type": "common library",
+            "type": "library",
             "autoload": {
                 "psr-4": {
                     "mycompany\\common\\": ""
                 }
             },
             "license": [
-                "common-1"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
-                    "name": "Jinlin Wang",
-                    "email": "285253001@qq.com",
-                    "homepage": "http://xxx.xxx.com",
+                    "name": "Cao Xiang",
+                    "email": "caoxiang@yeah.net",
+                    "homepage": "http://www.caoxw.com",
                     "role": "Creator"
                 }
             ],
             "description": "common",
-            "homepage": "http://git.hangjiashuo.com.cn:8686/dakashuo/lib-common.git",
+            "homepage": "http://www.caoxw.com",
             "keywords": [
                 "common",
                 "yii2"
             ],
-            "support": {
-                "issues": "https://xxx.xxx.com",
-                "source": "https://xxx.xxx.com"
-            },
-            "time": "2017-01-03 02:26:24"
+            "time": "2017-01-04 07:22:14"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -697,6 +694,53 @@
                 "yii2"
             ],
             "time": "2016-12-20 13:26:02"
+        },
+        {
+            "name": "yiisoft/yii2-httpclient",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-httpclient.git",
+                "reference": "2cc58c318da3c7c71bda1cc26bd3ec5a3ac26284"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-httpclient/2cc58c318da3c7c71bda1cc26bd3ec5a3ac26284.zip",
+                "reference": "2cc58c318da3c7c71bda1cc26bd3ec5a3ac26284",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\httpclient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "HTTP client extension for the Yii framework",
+            "keywords": [
+                "curl",
+                "http",
+                "httpclient",
+                "yii2"
+            ],
+            "time": "2016-10-31 11:29:06"
         },
         {
             "name": "yiisoft/yii2-redis",
